@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tarea 2</title>
+    <title>PRÁCTICA</title>
 
     <meta charset="UTF-8" />
 	
@@ -34,13 +34,13 @@
       var osm  = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '<a href="http://www.openstreetmap.org/">OpenStreetMap</a>'
       });	
-
+	osm.addTo(mapa);
       var mbox = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibXZhcmdhcyIsImEiOiJRc3ZyTmZzIn0.npefgTinHjwxhTt8fjzeIw', {
     	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     	id: 'mapbox.satellite',
     	accessToken: 'pk.eyJ1IjoibXZhcmdhcyIsImEiOiJRc3ZyTmZzIn0.npefgTinHjwxhTt8fjzeIw'
       });    
-      osm.addTo(mapa);
+      mbx.addTo(mapa);
 	    	
    // Capa de tipo L.tileLayer definida con el complemento Leaflet-providers
       var sta = L.tileLayer.provider('Stamen.Watercolor');
@@ -134,11 +134,7 @@
 	"Nombre de Cantón: ": registrocanton,
 	"Población Total: ": pob
       };
-  
-  
-  
-  
-  
+ 
   
       L.control.layers(baseLayers, overlays).addTo(mapa);
 	    
