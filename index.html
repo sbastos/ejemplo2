@@ -50,7 +50,11 @@
 });
       topoMap.addTo(mapa);
 			
-	  
+       var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+}); 
+	Esri_WorldImagery.addTo(mapa);    
+	    
 	<!-- Definición de variable Cantón-->
 		
 		function infocanton(feature, layer) {
@@ -129,7 +133,8 @@
       var baseLayers = {
 	"OpenStreetMap": osm,
 	"MapBox" : mbox,
-	"Statemen": topoMap      
+	"Statemen": topoMap, 
+	"Esri_WorldImagery" : Esri_WorldImagery     
       };
 	  
    var overlays = {
