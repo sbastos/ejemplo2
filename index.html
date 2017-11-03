@@ -54,6 +54,15 @@
 }); 
 	Esri_WorldImagery.addTo(mapa);    
 	    
+	var Stamen_Watercolor = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	minZoom: 1,
+	maxZoom: 16,
+	ext: 'png'
+});
+	 Stamen_Watercolor.addTo(mapa);   
+	    
 	<!-- Definición de variable Cantón-->
 		
 		function infocanton(feature, layer) {
@@ -133,7 +142,8 @@
 	"OpenStreetMap": osm,
 	"MapBox" : mbox,
 	"Statemen": topoMap, 
-	"Esri_WorldImagery" : Esri_WorldImagery     
+	"Esri_WorldImagery" : Esri_WorldImagery,
+	 "Stamen_Watercolor" : Stamen_Watercolor     
       };
 	  
    var overlays = {
